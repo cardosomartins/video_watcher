@@ -1,4 +1,4 @@
-const FirtsComponent = () => {
+const SketchComponent = () => {
     return (
         <div>
             <h2> Hello there</h2>
@@ -6,4 +6,4 @@ const FirtsComponent = () => {
     )
 }
 
-export default FirtsComponent
+export default SketchComponent

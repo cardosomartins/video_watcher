@@ -2,12 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-
-import FirtsComponent from './FirstComponent/FirstComponents.jsx'
+import SketchComponent from './FirstComponent/FirstComponents.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <FirtsComponent />
+    <SketchComponent />
   </StrictMode>,
 )
