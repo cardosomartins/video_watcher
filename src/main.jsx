@@ -2,11 +2,16 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import SketchComponent from './FirstComponent/FirstComponents.jsx'
+import SearchDescription from './FirstComponent/SearchDescription.jsx'
+import SearchBarComponent from './FirstComponent/SearchBarComponent.jsx'
+import TitleComponent from './FirstComponent/TitleComponent.jsx'
 
-createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <StrictMode>
-    <App />
-    <SketchComponent />
-  </StrictMode>,
+    <TitleComponent/>
+    <App/>
+    <SearchDescription/>
+    <SearchBarComponent/>
+  </StrictMode>
 )
