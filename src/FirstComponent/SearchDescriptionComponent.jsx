@@ -1,4 +1,4 @@
-const SearchDescription = () => {
+const SearchDescriptionComponent = () => {
     return (
         <div>
             <h3> Search for videos! </h3>
@@ -6,4 +6,4 @@ const SearchDescription = () => {
     )
 }
 
-export default SearchDescription
+export default SearchDescriptionComponent
