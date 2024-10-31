@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import turtle from './public/turtle.png'
 import './App.css'
-import TitleComponent from './FirstComponent/TitleComponent.jsx'
-import SearchDescriptionComponent from './FirstComponent/SearchDescriptionComponent.jsx'
-import SearchBarComponent from './FirstComponent/SearchBarComponent.jsx'
+import TitleComponent from './Components/TitleComponent.jsx'
+import SearchDescriptionComponent from './Components/SearchDescriptionComponent.jsx'
+import SearchBarComponent from './Components/SearchBarComponent.jsx'
 
 function App() {
 
