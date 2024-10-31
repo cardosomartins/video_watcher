@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import turtle from './public/turtle.png'
 import './App.css'
+import TitleComponent from './FirstComponent/TitleComponent.jsx'
+import SearchDescriptionComponent from './FirstComponent/SearchDescriptionComponent.jsx'
+import SearchBarComponent from './FirstComponent/SearchBarComponent.jsx'
 
 function App() {
-  const [count, setCount] = useState(1)
 
   return (
     <>
+      <TitleComponent/>
       <div>
         <img src={turtle} alt="turtle" />
       </div>
+      <SearchDescriptionComponent/>
+      <SearchBarComponent/>
     </>
   )
 }
