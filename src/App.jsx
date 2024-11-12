@@ -18,24 +18,19 @@ async function RetrieveData(){
 }
 
 
-function App() {  
-  
-  const handleClick = (
-    () => {
-      setToggle(!toggleState);
-      const Prefix = "https://www.youtube.com/watch?v="
+function App() { 
 
-      RetrieveData().then(result =>
-        setData(result));    
+  const handleSearch = (search) => {
+      setSearchText(search);
+      
+      if (searchText == "") return;
+      RetrieveData().then(result => setData(result));
     }
-  );
+  ;
 
-  const [toggleState, setToggle] = useState(false);
-
-  useEffect(() => {}, [toggleState])
+  const [searchText, setSearchText] = useState();
 
   const [data, setData] = useState([])
-  const VideoURLs = []
   const Prefix = "https://www.youtube.com/watch?v="
 
   return (
@@ -45,14 +40,12 @@ function App() {
 
       <SearchDescriptionComponent/>
 
-      <SearchBarComponent/>
-
+      <SearchBarComponent onSearch={handleSearch}/>
+      
       {data.map((item, index) =>
       <YoutubeThumbnailComponent Key = {index} Title={item.snippet.title} Description={item.snippet.description} MediumThumbnail={item.snippet.thumbnails.default.url} PublishDate={item.snippet.publishedAt} VideoURL = {Prefix + item.id.videoId} />)}
       
       {data.map((item, index) => <YoutubeEmbedComponent Key = {index} VideoId={item.id.videoId} />)}
-
-      <button onClick={handleClick}> Click here to retrieve Videos! {toggleState}</button>      
     </>
   )
 }
