@@ -25,4 +25,3 @@ const SearchBarComponent = ({onSearch}) => {
 }
 
 export default SearchBarComponent
-

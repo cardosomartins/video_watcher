@@ -18,20 +18,22 @@ async function RetrieveData(){
 }
 
 
-function App() { 
+function App() {
+  
+  const [data, setData] = useState([])
+  const [searchText, setSearchText] = useState("");
+  const Prefix = "https://www.youtube.com/watch?v="
 
   const handleSearch = (search) => {
-      setSearchText(search);
+    setSearchText(search);
       
-      if (searchText == "") return;
-      RetrieveData().then(result => setData(result));
-    }
-  ;
+    if (search == "") return;
+    RetrieveData().then(result => setData(result));
+  };
 
-  const [searchText, setSearchText] = useState();
-
-  const [data, setData] = useState([])
-  const Prefix = "https://www.youtube.com/watch?v="
+  useEffect(() => {
+    if(searchText != "") RetrieveData().then(result => setData(result));},    
+    [searchText]);
 
   return (
     <>
